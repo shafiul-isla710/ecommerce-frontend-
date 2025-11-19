@@ -35,14 +35,13 @@
               <div class="heading_s1">
                 <h3>Login</h3>
               </div>
-              <form method="post">
                 <div class="form-group mb-3">
-                  <input type="text" required="" class="form-control" name="email" placeholder="Enter OTP">
+                  <input type="text" v-model="otp" class="form-control" name="email" placeholder="Enter OTP">
+                  <div v-if="error.otp" class="text-danger">{{error.otp}}</div>
                 </div>
                 <div class="form-group mb-3">
-                  <button type="submit" class="btn btn-fill-out btn-block" name="login">Log in</button>
+                  <button @click="login" type="submit" class="btn btn-fill-out btn-block" name="login">Log in</button>
                 </div>
-              </form>
             </div>
           </div>
         </div>
@@ -53,5 +52,30 @@
 </template>
 
 <script setup>
+import authStore from "@/store/authStore.js";
+import {reactive, ref} from "vue";
+import {useRouter} from "vue-router";
+import cogoToast from "cogo-toast";
+
+const otp = ref('');
+const router = useRouter();
+const error = reactive({
+
+})
+const login = async () => {
+  Object.keys(error).forEach((key)=>{
+    delete error[key];
+  })
+  if(!otp.value){
+    error.otp = 'Enter Valide OTP'
+  }
+  else{
+    const result = await authStore().login({
+      otp: otp.value,
+    });
+  }
+
+
+}
 
 </script>
