@@ -37,32 +37,12 @@
               </div>
               <form method="post">
                 <div class="form-group mb-3">
-                  <input type="text" required="" class="form-control" name="email" placeholder="Your Email">
-                </div>
-                <div class="form-group mb-3">
-                  <input class="form-control" required="" type="password" name="password" placeholder="Password">
-                </div>
-                <div class="login_footer form-group mb-3">
-                  <div class="chek-form">
-                    <div class="custome-checkbox">
-                      <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox1" value="">
-                      <label class="form-check-label" for="exampleCheckbox1"><span>Remember me</span></label>
-                    </div>
-                  </div>
-                  <a href="#">Forgot password?</a>
+                  <input type="text" required="" class="form-control" name="email" placeholder="Enter OTP">
                 </div>
                 <div class="form-group mb-3">
                   <button type="submit" class="btn btn-fill-out btn-block" name="login">Log in</button>
                 </div>
               </form>
-              <div class="different_login">
-                <span> or</span>
-              </div>
-              <ul class="btn-login list_none text-center">
-                <li><a href="#" class="btn btn-facebook"><i class="ion-social-facebook"></i>Facebook</a></li>
-                <li><a href="#" class="btn btn-google"><i class="ion-social-googleplus"></i>Google</a></li>
-              </ul>
-              <div class="form-note text-center">Don't Have an Account? <a href="signup.html">Sign up now</a></div>
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@
               <ul class="header_list">
                 <li><a href="compare.html"><i class="ti-control-shuffle"></i><span>Compare</span></a></li>
                 <li><a href="wishlist.html"><i class="ti-heart"></i><span>Wishlist</span></a></li>
-                <li><router-link :to="{name:'login'}"><i class="ti-user"></i><span>Login</span></router-link></li>
+                <li><router-link :to="{name:'sent-otp'}"><i class="ti-user"></i><span>Login</span></router-link></li>
               </ul>
             </div>
           </div>

@@ -3,12 +3,18 @@ import { createWebHistory, createRouter } from 'vue-router'
 import Home from '@/pages/home.vue'
 import Login from '@/pages/auth/login.vue'
 import Register from '@/pages/auth/registar.vue'
+import SendOtp from '@/pages/auth/sentOtp.vue'
 
 const routes = [
     {
         path: '/',
         name: 'Home',
         component: Home
+    },
+    {
+        path: '/sent-otp',
+        name: 'sent-otp',
+        component: SendOtp
     },
     {
         path: '/login',

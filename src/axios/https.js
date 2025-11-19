@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = 'https://ecommerce.test/v1'
+const url = 'https://ecommerce.test/api/v1/'
 
 const api = axios.create({
     baseURL: url,
@@ -10,6 +10,13 @@ const api = axios.create({
 })
 
 api.interceptors.request.use((config) => {
+    const token = localStorage.getItem('token');
 
+    if(token){
+        config.headers['Authorization'] = `Bearer ${token}`
+    }
+    return config
 })
+
+export default api
 
